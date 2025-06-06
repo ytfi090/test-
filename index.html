@@ -30,7 +30,50 @@
 
   <div class="stat">
     <strong>Concurrent Live Viewers:</strong>
-    <span id="concurrent">7,168,444</span>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Live Usage Stats</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #111;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    .stat {
+      font-size: 1.8em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📺 YouTube Usage – Right Now</h1>
+  <div class="stat"><strong>Concurrent Viewers:</strong> <span id="concurrent">Loading...</span></div>
+  <div class="stat"><strong>Daily Users:</strong> 122,000,000</div>
+  <div class="stat"><strong>Monthly Users:</strong> 2.7 Billion</div>
+
+  <script>
+    let viewers = 7168444; // Starting number
+    const element = document.getElementById("concurrent");
+
+    function updateViewers() {
+      const change = Math.floor(Math.random() * 2000 - 1000); // Random +/-
+      viewers += change;
+      element.innerText = viewers.toLocaleString();
+    }
+
+    updateViewers(); // Initial update
+    setInterval(updateViewers, 1000); // Every second
+  </script>
+</body>
+</html>
+
   </div>
   <div class="stat">
     <strong>Daily Active Users (DAU):</strong>
